@@ -68,7 +68,63 @@
 //     console.log(`value of a is ${a + 3}`);
 // }
 
-let jsonRes = '{"fact": "In contrast to dogs, cats have not undergone major changes during their domestication process.","length": 94}';
-console.log(jsonRes);
-let validRes = JSON.parse(jsonRes);
-console.log(validRes.fact);
+// let jsonRes = '{"fact": "In contrast to dogs, cats have not undergone major changes during their domestication process.","length": 94}';
+// console.log(jsonRes);
+// let validRes = JSON.parse(jsonRes);
+// console.log(validRes.fact);
+
+let url = "https://catfact.ninja/fact";
+
+// fetch(url)
+//     .then((res) => {
+    //         // console.log(res);
+    //         return res.json();
+    //     })
+    //     .then((data) => {
+        //         console.log("data1 =", data.fact);
+        //         return fetch(url);
+        //     })
+        //     .then((res) => {
+            //         // console.log(res);
+            //         return res.json();
+//     })
+//     .then((data2) => {
+    //         console.log("data2 =",data2.fact);
+    //     })
+    //     .catch((err) => {
+//         console.log("Error-", err);
+//     })
+
+// async function getFacts(){
+//     try{
+    //     let res = await fetch(url);
+    //     let data = await res.json();    
+    //     console.log(data.fact);
+//     let res2 = await fetch(url);
+//     let data2 = await res2.json();    
+//     console.log(data2.fact);
+// } catch (err){
+    //     console.log("Error-", err);
+// }
+// console.log("Bye");
+// }
+
+async function getFacts(){
+    try{
+        let res = await axios.get(url);    
+        // console.log(res.data.fact);
+        return res.data.fact;
+    } catch (err){
+        console.log("Error-", err);
+        return "No fact found";
+    }
+}
+
+let btn = document.querySelector("button");
+
+btn.addEventListener("click", async () => {
+    let fact = await getFacts();
+    // console.log(fact);
+    let p = document.querySelector('#result');
+    p.innerText = fact;
+})
