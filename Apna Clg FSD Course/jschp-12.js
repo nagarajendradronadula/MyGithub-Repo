@@ -45,7 +45,7 @@
 //             if(num > 3){
 //                 reject("promise rejected");
 //             }
-            
+
 //             h1.style.color = color;
 //             console.log(`color change ${color}`);
 //             resolve();
@@ -73,58 +73,115 @@
 // let validRes = JSON.parse(jsonRes);
 // console.log(validRes.fact);
 
-let url = "https://catfact.ninja/fact";
-
+// let url = "https://catfact.ninja/fact";
+// let url2 = "https://dog.ceo/api/breeds/image/random";
 // fetch(url)
 //     .then((res) => {
-    //         // console.log(res);
-    //         return res.json();
-    //     })
-    //     .then((data) => {
-        //         console.log("data1 =", data.fact);
-        //         return fetch(url);
-        //     })
-        //     .then((res) => {
-            //         // console.log(res);
-            //         return res.json();
+//         // console.log(res);
+//         return res.json();
+//     })
+//     .then((data) => {
+//         console.log("data1 =", data.fact);
+//         return fetch(url);
+//     })
+//     .then((res) => {
+//         // console.log(res);
+//         return res.json();
 //     })
 //     .then((data2) => {
-    //         console.log("data2 =",data2.fact);
-    //     })
-    //     .catch((err) => {
+//         console.log("data2 =",data2.fact);
+//     })
+//     .catch((err) => {
 //         console.log("Error-", err);
 //     })
-
 // async function getFacts(){
 //     try{
-    //     let res = await fetch(url);
-    //     let data = await res.json();    
-    //     console.log(data.fact);
+//     let res = await fetch(url);
+//     let data = await res.json();    
+//     console.log(data.fact);
 //     let res2 = await fetch(url);
 //     let data2 = await res2.json();    
 //     console.log(data2.fact);
 // } catch (err){
-    //     console.log("Error-", err);
+//     console.log("Error-", err);
 // }
 // console.log("Bye");
 // }
+// let btn = document.querySelector("button");
+// async function getFacts(){
+//     try{
+//         let res = await axios.get(url);    
+//         // console.log(res.data.fact);
+//         return res.data.fact;
+//     } catch (err){
+//         console.log("Error-", err);
+//         return "No fact found";
+//     }
+// }
+// btn.addEventListener("click", async () => {
+//     let fact = await getFacts();
+//     // console.log(fact);
+//     let p = document.querySelector('#result');
+//     p.innerText = fact;
+// })
+// async function getImage(){
+//     try{
+//         let res = await axios.get(url2);    
+//         
+//         return res.data.message;
+//     } catch (err){
+//         console.log("Error-", err);
+//         return "/";
+//     }
+// }
+// btn.addEventListener("click", async () => {
+//    let link = await getImage();
+// //    console.log(link);
+//     let img = document.querySelector("#result");
+//     img.setAttribute("src", link);
+// })
 
-async function getFacts(){
-    try{
-        let res = await axios.get(url);    
-        // console.log(res.data.fact);
-        return res.data.fact;
-    } catch (err){
-        console.log("Error-", err);
-        return "No fact found";
+// const url = "https://icanhazdadjoke.com/";
+
+// async function getJokes() {
+//     try {
+//         const config = { headers: {Accept: "application/json"}};
+//         let res = await axios.get(url, config);
+//         console.log(res.data);
+//     }
+//     catch (err) {
+//         console.log(err);
+//     }
+// }
+
+let url = "http://universities.hipolabs.com/search?name=";
+let btn = document.querySelector("button");
+btn.addEventListener("click", async ()=>{
+    let country = document.querySelector("input").value;
+    // console.log(country);
+    let colArr = await getColleges(country);
+    // console.log(colArr);
+    show(colArr);
+})
+
+function show(colArr){
+    let list = document.querySelector("#list");
+    list.innerText = "";
+    for(col of colArr){
+        // console.log(col.name);
+        let li = document.createElement("li");
+        li.innerText = col.name;
+        list.appendChild(li);
     }
 }
-
-let btn = document.querySelector("button");
-
-btn.addEventListener("click", async () => {
-    let fact = await getFacts();
-    // console.log(fact);
-    let p = document.querySelector('#result');
-    p.innerText = fact;
-})
+// let country = "Nepal";
+async function getColleges(country){
+    try{
+        let res = await axios.get(url + country);
+        // console.log(res.data);
+        return res.data;
+    }catch(err){
+        // console.log("data not found", err);
+        return [];
+    }
+}
