@@ -4,26 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+       <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Weather App</title>
     <link href="weather_logo.png" rel="icon">
     <link rel="stylesheet" href="weather.css">
 </head>
 
 <body>
-    <div class="logo">
+    <!-- <div class="logo">
         <div><img src="weather_logo.png" alt="weather logo"></div>
         <div><img src="my-logo.jpg" alt="dnr logo"></div>
     </div>
     <div class="main-box">
         <h1>Weather App!</h1>
-        <!-- <h3>Welcome to the website</h3> -->
         <form>
             <span class="material-symbols-outlined">location_on</span>
             <input type="text" placeholder="Enter city name" id="city">
@@ -37,7 +35,50 @@
                 <div class="wind-speed" id="wind-speed"></div>
             </div>
         </div>
+    </div> -->
+
+    <div class="container">
+        <div class="search-box">
+            <i class="bx bxs-map"></i>
+            <input type="text" placeholder="enter your city">
+            <button><i class="bx bx-search"></i></button>
+        </div>
+
+        <div class="weather-box">
+            <div class="box">
+                <div class="info-weather">
+                    <div class="weather">
+                        <img src="weather_logo.png" alt="weather logo">
+                        <p class="temperature">16<span>°C</span></p>
+                        <p class="description">Broken Clouds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="bx bx-water"></i>
+                <div class="text">
+                    <div class="info-humidity">
+                        <span>0%</span>
+                    </div>
+                    <p>Humidity</p>
+                </div>
+            </div>
+
+            <div class="wind">
+                <i class="bx bx-wind"></i>
+                <div class="text">
+                    <div class="info-wind">
+                        <span>0Km/H</span>
+                    </div>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
     </div>
+
     <script src="weather.js"></script>
 </body>
 
