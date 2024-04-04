@@ -23,8 +23,6 @@ search.addEventListener('click', () => {
             return;
         }
 
-
-
         const image = document.querySelector('.weather-box img');
         const temperature = document.querySelector('.weather-box .temperature');
         const description = document.querySelector('.weather-box .description');
@@ -39,32 +37,32 @@ search.addEventListener('click', () => {
             weatherBox.classList.add('active');
             weatherDetails.classList.add('active');
             error404.classList.remove('active');
-            
+
             switch (json.weather[0].main) {
-            case 'Clear':
-                image.src = 'clear.png';
-                break;
+                case 'Clear':
+                    image.src = 'clear.png';
+                    break;
 
-            case 'Rain':
-                image.src = 'rain.png';
-                break;
+                case 'Rain':
+                    image.src = 'rain.png';
+                    break;
 
-            case 'Snow':
-                image.src = 'snow.png';
-                break;
+                case 'Snow':
+                    image.src = 'snow.png';
+                    break;
 
-            case 'Mist':
-                image.src = 'mist.png';
-                break;
+                case 'Mist':
+                    image.src = 'mist.png';
+                    break;
 
-            case 'Haze':
-                image.src = 'mist.png';
-                break;
+                case 'Haze':
+                    image.src = 'mist.png';
+                    break;
 
-            default:
-                image.src = 'cloud.png';
+                default:
+                    image.src = 'cloud.png';
 
-        }
+            }
         }
 
         temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
