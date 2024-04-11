@@ -15,5 +15,18 @@
 // const val = require("./math");
 // console.log(val);
 
-const info = require("./nodejs-2");
-console.log(info);
+// const info = require("./fruits");
+// console.log(info);
+
+// const figlet = require('figlet');
+// figlet("TYSON", function (err, data) {
+//     if (err) {
+//       console.log("Something went wrong...");
+//       console.dir(err);
+//       return;
+//     }
+//     console.log(data);
+//   });
+
+import {sum, PI} from "./math.js"
+console.log(sum(1,PI));
