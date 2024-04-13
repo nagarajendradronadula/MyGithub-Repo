@@ -34,6 +34,7 @@ app.get("/", (req, res) => {
 // app.post("/", (req, res) => {
 //     res.send("You sent a post request");
 // })
+
 app.get("/:username/:id",(req,res) => {
     console.log(req.params);
     let code = `<h1>Hello and welcome to the page of @${req.params.username}!</h1>`
