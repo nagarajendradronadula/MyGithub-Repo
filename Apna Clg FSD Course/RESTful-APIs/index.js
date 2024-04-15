@@ -13,7 +13,7 @@ app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
-const posts = [
+let posts = [
     {
         id: uuidv4(),
         username:"apnacollege",
