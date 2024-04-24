@@ -1,4 +1,4 @@
-CREATE database IF NOT EXISTS instagram;
+CREATE DATABASE IF NOT EXISTS instagram;
 
 USE instagram;
 
