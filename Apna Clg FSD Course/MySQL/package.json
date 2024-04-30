@@ -1,0 +1,16 @@
+{
+  "name": "mysql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DNR",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "faker": "^5.5.3",
+    "mysql2": "^3.9.7"
+  }
+}
