@@ -1,0 +1,114 @@
+body {
+    background-image: url(bg.jpg);
+    overflow: hidden;
+}
+
+.outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.header h3{
+    font-style: oblique;
+    color:indianred;
+    font-size: 2rem;
+    font-weight:300;
+    font-family:Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
+    height: 46rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* color: white; */
+    margin: 0 auto;
+    backdrop-filter: blur(15px);
+    border-radius: 0.5rem;
+    border: 3px solid white;
+    /* transition: 0.4s 0s ease-in-out; */
+}
+
+/* .container:hover{
+    transform:scale(1.1);
+} */
+
+.messages{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 36rem;
+    width: 40rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    border: 3px solid white;
+    border-radius: 0.5rem;
+    margin-top: -1rem;
+}
+
+.send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerElements {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.response{
+    background-color:darkseagreen;
+    color: black;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+}
+.request{
+    background-color:rgb(222, 210, 118);
+    color: black;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    width: 4.5rem;
+}
+
+button{
+    appearance: none;
+    background-color: rgba(18, 114, 231, 0.876);
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    color: black;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+}
+
+textarea{
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    color: black;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+}

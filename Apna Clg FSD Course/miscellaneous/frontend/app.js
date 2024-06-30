@@ -65,7 +65,7 @@ class Student extends Person{
 }
 
 class Teacher extends Person{
-    consructor(name, age, subject){
+    constructor(name, age, subject){
         super(name, age);
         this.subject = subject;
     }
