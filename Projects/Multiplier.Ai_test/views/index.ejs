@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+</head>
+<body>
+    <h1>To-Do App</h1>
+
+    <form action="/todos" method="POST">
+        <input type="text" name="content" placeholder="Enter task">
+        <button type="submit">Add</button>
+    </form>
+
+    <ul id="todos">
+        <% for (let todo of todos) { %>
+            <li>
+                <%= todo.content %>
+                <form action="/todos/<%= todo._id %>?_method=DELETE" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% } %>
+    </ul>
+
+</body>
+</html>
