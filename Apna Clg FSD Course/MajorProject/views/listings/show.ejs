@@ -2,8 +2,7 @@
 
 <script>
     const mapToken = "<%= process.env.MAP_TOKEN%>";
-    const coordinates = <%- JSON.stringify(listing.geometry.coordinates) %>;
-    const location = <%- JSON.stringify(listing.location) %>;
+    const listing = <%- JSON.stringify(listing) %>;
 </script>
 
     <div class="row">
@@ -115,7 +114,7 @@
                             <% } %>
 
 
-                                <div class="col-6 offset-3 mt-3">
+                                <div class="col-6 offset-3 mt-3 mb-3">
                                     <h4>Where you'll be</h4>
                                     <div id='map'></div>
                                 </div>
