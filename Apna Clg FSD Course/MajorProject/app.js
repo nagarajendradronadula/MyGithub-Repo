@@ -1,7 +1,9 @@
-if(process.env.NODE_ENV != "production"){
+if(process.env.NODE_ENV !== "production"){
   require('dotenv').config();
 }
 // console.log(process.env.secret);
+console.log("MongoDB URL:", process.env.ATLASDB);
+console.log("Session Secret:", process.env.SECRET);
 
 
 const express = require("express");
@@ -11,6 +13,7 @@ const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const session = require("express-session");
+const MongoStore = require('connect-mongo');
 const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
@@ -20,8 +23,31 @@ const listingRouter = require("./routes/listing.js");
 const reviewsRouter = require("./routes/reviews.js");
 const userRouter = require("./routes/user.js");
 
+
+const dbUrl = process.env.ATLASDB;
+
+console.log("MongoDB URL (dbUrl):", dbUrl);
+
+if (!dbUrl) {
+  console.error("Error: MongoDB URL is not defined. Check your environment variables.");
+  process.exit(1);  // Exit if dbUrl is not set, to prevent further errors
+}
+
+const store = MongoStore.create({
+  mongoUrl: dbUrl,
+  // crypto:{
+  //   secret: process.env.SECRET,
+  // },
+  touchAfter: 24 * 60 * 60,
+});
+
+store.once("error", (e) => {
+  console.log("SESSION STORE ERROR", e);
+});
+
 const sessionOptions = {
-  secret: "secretString",
+  store,
+  secret: process.env.SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: {
@@ -31,8 +57,7 @@ const sessionOptions = {
   },
 };
 
-
-const mongoUrl = "mongodb://127.0.0.1:27017/wonderlust";
+// const mongoUrl = "mongodb://127.0.0.1:27017/wonderlust";
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -41,7 +66,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
-mongoose.connect(mongoUrl)
+mongoose.connect(dbUrl)
 .then(() => {
   console.log("Connected to Database");
 })

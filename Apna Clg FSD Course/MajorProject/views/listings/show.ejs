@@ -2,8 +2,7 @@
 
 <script>
     const mapToken = "<%= process.env.MAP_TOKEN%>";
-    const coordinates = <%- JSON.stringify(listing.geometry.coordinates) %>;
-    const location = <%- JSON.stringify(listing.location) %>;
+    const listing = <%- JSON.stringify(listing) %>;
 </script>
 
     <div class="row">
