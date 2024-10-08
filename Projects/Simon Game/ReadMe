@@ -1,0 +1,3 @@
+In this project i have tried to make a simple and minimalistic simon game using javascript and html css
+where it flashes a random colored box and the user should remember it and click or tap on it but the user should also remember the
+previous pattern and maintain the sequence, if not maintained he loses the game and he gets his score.

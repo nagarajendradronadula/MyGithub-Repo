@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3 class="heading">All Contacts!</h3>
+    <div class="bar-out">
+        <div class="bar">
+            <!-- <form method="get" action="/contacts/new">
+            <button class="btn-new-contact">Add New Contact</button>
+            <br><br>
+        </form> -->
+            <button class="btns"><a href="/contacts/new">Add New Contact</a></button>
+            <button class="btns"><a href="/register">Register</a></button>
+            <button class="btns"><a href="/login">Login</a></button>
+            <button class="btns"><a href="/logout">Logout</a></button>
+        </div>
+    </div>
+    <div class="contact">
+        <table class="innerContent">
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Email</th>
+                <th>Created On</th>
+                <th>Actions</th>
+            </tr>
+            <% for(let contact of contacts){ %>
+                <div class="content">
+                    <tr>
+                        <td>
+                            <%= contact.name %>
+                        </td>
+                        <td>
+                            <%= contact.mobile %>
+                        </td>
+                        <td>
+                            <%= contact.mail %>
+                        </td>
+                        <td>
+                            <!-- <= contact.created_at %> -->
+                            <%= contact.created_at.toString().split(" ")[4] %>
+                            <%= contact.created_at.toString().split(" ").slice(0,4).join(" -") %>
+
+                        </td>
+                        <td>
+                            <form method="get" action="/contacts/<%=contact._id %>/edit"></form>
+                            <button class="btn-edit">Edit</button>
+                            </form>
+                            <form method="post" action="/contacts/<%=contact._id %>?_method=DELETE">
+                                <button class="btn-delete">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                </div>
+                <% } %>
+        </table>
+    </div>
+    </div>
+    <br>
+    <br>
+</body>
+
+</html>

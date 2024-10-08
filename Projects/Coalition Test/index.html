@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="logo.png">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <nav>
+        <div class="innerNavElements">
+            <div class="logo">
+                <img src="images/TestLogo.png" alt="Logo">
+            </div>
+            <div class="buttons">
+                <div class="innerBtns">
+                    <div><button id="overview" href="#"><img src="images/home_FILL0_wght300_GRAD0_opsz24.png">Overview</div>
+                    <div><button id="patients" href="/"><img src="images/group_FILL0_wght300_GRAD0_opsz24.png">Patients</div>
+                    <div><button id="schedule" href="#"><img src="images/calendar_today_FILL0_wght300_GRAD0_opsz24.png">Schedule</div>
+                    <div><button id="manage" href="#"><img src="images/chat_bubble_FILL0_wght300_GRAD0_opsz24.png">Manage</div>
+                    <div><button id="transactions" href="#"><img src="images/credit_card_FILL0_wght300_GRAD0_opsz24.png">Transactions</div>
+                </div>
+            </div>
+            <div class="profile">
+                <img class ="profilePic" src="images/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png">
+                <div class="name">
+                    <p id="user">Dr. Jose Simmons</p>
+                    <p>General Practitioner</p>
+                </div>
+                <div class="profileBtns">
+                    <button><img src="settings_FILL0_wght300_GRAD0_opsz24.png"></button>
+                    <button><img src="images/more_vert_FILL0_wght300_GRAD0_opsz24.png"></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech.Care Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            margin-top: 20px;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+        .content {
+            width: 80%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .patient-list {
+            list-style: none;
+            padding: 0;
+        }
+        .patient-list li {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .patient-list li.active {
+            background-color: #e6f7ff;
+            border-radius: 5px;
+        }
+        .header, .diagnosis-history, .vitals, .diagnostic-list, .lab-results, .profile {
+            margin-bottom: 20px;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 100px;
+        }
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .card h2 {
+            margin: 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Patients</h2>
+            <ul class="patient-list">
+                <li>Emily Williams</li>
+                <li>Ryan Johnson</li>
+                <li>Brandon Mitchell</li>
+                <li class="active">Jessica Taylor</li>
+                <li>Samantha Johnson</li>
+                <li>Ashley Martinez</li>
+                <li>Olivia Brown</li>
+                <li>Tyler Davis</li>
+                <li>Kevin Anderson</li>
+                <li>Dylan Thompson</li>
+                <li>Nathan Evans</li>
+                <li>Mike Nolan</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Header -->
+            <div class="header">
+                <h1>Tech.Care Dashboard</h1>
+            </div>
+
+            <!-- Diagnosis History -->
+            <div class="diagnosis-history">
+                <h2>Diagnosis History</h2>
+                <div class="card">
+                    <!-- Placeholder for Chart -->
+                    <h2>Blood Pressure Chart</h2>
+                    <p>Chart goes here</p>
+                </div>
+            </div>
+
+            <!-- Vitals -->
+            <div class="vitals grid">
+                <div class="card">
+                    <h2>Respiratory Rate</h2>
+                    <p>20 bpm</p>
+                </div>
+                <div class="card">
+                    <h2>Temperature</h2>
+                    <p>98.6°F</p>
+                </div>
+                <div class="card">
+                    <h2>Heart Rate</h2>
+                    <p>78 bpm</p>
+                </div>
+            </div>
+
+            <!-- Diagnostic List -->
+            <div class="diagnostic-list">
+                <h2>Diagnostic List</h2>
+                <div class="card">
+                    <table width="100%">
+                        <tr>
+                            <th>Problem/Diagnosis</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>Hypertension</td>
+                            <td>Chronic high blood pressure</td>
+                            <td>Under Observation</td>
+                        </tr>
+                        <tr>
+                            <td>Type 2 Diabetes</td>
+                            <td>Insulin resistance and elevated blood sugar</td>
+                            <td>Critical</td>
+                        </tr>
+                        <tr>
+                            <td>Asthma</td>
+                            <td>Recurrent episodes of bronchial constriction</td>
+                            <td>Inactive</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Lab Results -->
+            <div class="lab-results">
+                <h2>Lab Results</h2>
+                <div class="card">
+                    <ul>
+                        <li>Blood Tests</li>
+                        <li>CT Scans</li>
+                        <li>Radiology Reports</li>
+                        <li>X-Rays</li>
+                        <li>Urine Test</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile">
+            <h2>Jessica Taylor</h2>
+            <img src="profile-pic.jpg" alt="Jessica Taylor">
+            <p>Date of Birth: August 23, 1996</p>
+            <p>Gender: Female</p>
+            <p>Contact Info: (415) 555-1234</p>
+            <p>Emergency Contacts: (415) 555-5678</p>
+            <p>Insurance Provider: Sunshine Health Assurance</p>
+            <button>Show All Information</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+</body>
+</html>

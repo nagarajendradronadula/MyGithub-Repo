@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Self-Service Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Insurance Self-Service Portal</h1>
+
+        <!-- Claim Submission Form -->
+        <section id="claim-form-section">
+            <h2>Submit a New Insurance Claim</h2>
+            <form id="claim-form">
+                <label for="policy-number">Policy Number:</label>
+                <input type="text" id="policy-number" name="policy-number" required>
+
+                <label for="incident-description">Incident Description:</label>
+                <textarea id="incident-description" name="incident-description" required></textarea>
+
+                <label for="incident-date">Date of Occurrence:</label>
+                <input type="date" id="incident-date" name="incident-date" required>
+
+                <label for="supporting-docs">Supporting Documents:</label>
+                <input type="file" id="supporting-docs" name="supporting-docs" multiple>
+
+                <button type="submit">Submit Claim</button>
+            </form>
+            <p id="form-message"></p>
+        </section>
+
+        <!-- Track Claim Status -->
+        <section id="claim-status-section">
+            <h2>Track Claim Status</h2>
+            <ul id="claim-status-list"></ul>
+        </section>
+
+        <!-- Chatbot Integration (Dialogflow) -->
+        <section id="chatbot-section">
+            <h2>Chatbot Assistance</h2>
+            <iframe allow="microphone;" width="350" height="430"
+                src="https://console.dialogflow.com/api-client/demo/embedded/chatbot-uwht">
+            </iframe>
+        </section>
+
+        <!-- Knowledge Base Search -->
+        <section id="knowledge-base">
+            <h2>Knowledge Base</h2>
+            <input type="text" id="search-bar" placeholder="Search FAQs...">
+            <ul id="search-results"></ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

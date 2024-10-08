@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    /* margin-top: 1rem; */
+    /* margin-right: 2rem;
+    margin-left: 2rem; */
+    background-color: none;
+    max-width: 100%;
+    box-shadow:  0 5px 10px #888888;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 1rem; */
+    /* margin-right: 2rem;
+    margin-left: 2rem; */
+    background-color: none;
+    max-width: 100%;
+}
+
+nav h3{
+    margin-right: 4px;
+    font-size:xx-large;
+    font-weight: 700;
+}
+
+nav img{
+    height: 75px;
+    width: 75px;
+}
+
+nav div{
+    margin-right: 1rem;
+}
+
+nav h3{
+    margin-left: 4px;
+    cursor: default;
+}
+
+nav input{
+    /* -webkit-appearance: none; */
+    border: none;
+    height: 30px;
+    width: 280px;
+    border-radius: 20px;
+    margin-left: 4px;
+}
+
+nav input:focus{
+    font-weight: 700;
+    outline: none;
+}
+
+.searchbox{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 30px;
+    width: 300px;
+}
+
+.srchbtn{
+    font-weight: 700;
+}
+
+.searchbox button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.navbuttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbuttons button{
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.container{
+    box-shadow: 2px 2px 5px #888888;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cards{
+    /* display: flex;
+    flex-wrap: wrap; */
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.cards a img{
+    height: 100%;
+    width: 100%;
+}
+
+.section{
+    /* display:flex;
+    flex-wrap:wrap; */
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.section h2{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+div{
+    appearance: none;
+}

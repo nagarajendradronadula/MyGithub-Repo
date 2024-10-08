@@ -1,0 +1,323 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #b6b6b7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px 5px 5px;
+    width: 100%;
+    height: 6%;
+}
+
+nav img {
+    margin-left: 0.5rem;
+}
+
+.innerNavElements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 99%;
+    background-color: #fff;
+    border-radius: 70px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+.innerBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.innerBtns button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.innerBtns div img {
+    margin-right: 0.4rem;
+}
+
+.innerBtns button:active {
+    background-color: #01F0D0;
+    height: 40%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 16rem;
+}
+
+.name {
+    display: block;
+    width: 70%;
+}
+
+.profilePic {
+    margin-right: 1rem;
+    width: 17%;
+}
+
+.name p {
+    margin: 0;
+    width: 100%;
+    height: 50%;
+    font-size: smaller;
+}
+
+#user {
+    font-weight: 600;
+    font-size: medium;
+    margin-top: 0.5rem;
+}
+
+.profileBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    margin-right: 0.7rem;
+}
+
+.profileBtns button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    height: 70%;
+    width: 30%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 99%;
+    margin-top: 20px;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.content {
+    width: 80%;
+    background-color: #fff;
+    height: 32rem;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.patient-list {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.patient-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.active {
+    background-color: #78e29f;
+    border-radius: 5px;
+}
+
+.header, .diagnosis-history, .vitals, .diagnostic-list, .lab-results{
+    margin-bottom: 20px;
+}
+
+.profile-section img {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    /* background-color: #fff; */
+}
+
+.right img{
+    width: 10%;
+
+}
+
+.profile-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 38rem;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.profile-section img, p{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.lab-results {
+    height: 300px;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -15.5rem;
+}
+
+.chart {
+    width: 100%;
+    height: 500px;
+    background-color: #eef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.chart-placeholder {
+    width: 90%;
+    height: 90%;
+    background-color: #dde;
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 1rem;
+}
+
+.image-placeholder {
+    width: 200%;
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vitals-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    width: 10rem;
+    height: 14rem;
+}
+
+.respiratory {
+    padding: 10px;
+    margin-top: 0.5rem;
+    background-color: #90d0e7;
+    border-radius: 10px;
+}
+
+.temperature{
+    padding: 10px;
+    margin-top: 0.5rem;
+    background-color: #dcbfc2;
+    border-radius: 10px;
+}
+
+.heart{
+    padding: 10px;
+    margin-top: 0.5rem;
+    background-color: #edb0ca;
+    border-radius: 10px;
+}
+
+.diagnostic-list{
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.table-header{
+    font-weight: bold;
+    background-color: #c1c1c1;
+}
+
+.table{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    width:100%;
+    height: 40%;
+}
+
+.table tr td{
+    width: 40%;
+    height: 12%;
+}

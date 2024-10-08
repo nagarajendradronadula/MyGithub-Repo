@@ -1,0 +1,40 @@
+{%extends 'admins/adminbase.html'%}
+
+{%block contents%}
+<p>
+        <h3 align="center" style="color:rgb(19, 23, 218);">View RegisterUser Details</h3></p><br>
+        <table class="table table-bordered bg-light text-dark">
+            <thead>
+            <tr style="color:red;font-weight:bold;">
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Login ID</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Locality</th>
+                <th>Status</th>
+                <th>Activate</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in data %}
+            <tr style="color:red;font-weight:bold;">
+                <td>{{forloop.counter}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.loginid}}</td>
+                <td>{{i.mobile}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.locality}}</td>
+                <td>{{i.status}}</td>
+                {% if i.status == 'waiting' %}
+                <td><a class="btn-link" href="/AdminActivaUsers/?uid={{ i.id }}"
+                       style="color:DARKBLUE">Activate</a></td>
+                {% else %}
+                <td> Activated</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+{%endblock%}

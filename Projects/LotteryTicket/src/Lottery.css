@@ -1,0 +1,15 @@
+.ticket{
+    border: 5px solid lawngreen;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: khaki;
+    width: 450px;
+    height: 140px;
+    color: black;
+    margin: 1rem;
+}
+
+.ticketNum{
+    font-weight: 600;
+    font-size: 3rem;
+}

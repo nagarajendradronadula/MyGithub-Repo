@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Contact</title>
+</head>
+<body>
+    <h3>Edit your Contact: <%= contact.id %></h3>
+    <form method="post" action="/chats/<%= contact._id %>?_method=PUT">
+        <input type="text" name="name"><%= contact.name %><br>
+        <input type="number" name="mobile"><%= contact.mobile %><br>
+        <input type="mail" name="mail"><%= contact.mail %><br>
+        <button class="btn-edit">Edit</button>
+    </form>
+</body>
+</html>

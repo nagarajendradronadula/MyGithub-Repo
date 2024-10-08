@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Patient Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="innerNavElements">
+            <div class="logo">
+                <img src="images/TestLogo.png" alt="Logo">
+            </div>
+            <div class="buttons">
+                <div class="innerBtns">
+                    <div><button id="overview" href="#"><img
+                                src="images/home_FILL0_wght300_GRAD0_opsz24.png">Overview</button></div>
+                    <div><button id="patients" href="/"><img
+                                src="images/group_FILL0_wght300_GRAD0_opsz24.png">Patients</button></div>
+                    <div><button id="schedule" href="#"><img
+                                src="images/calendar_today_FILL0_wght300_GRAD0_opsz24.png">Schedule</button></div>
+                    <div><button id="manage" href="#"><img
+                                src="images/chat_bubble_FILL0_wght300_GRAD0_opsz24.png">Manage</button></div>
+                    <div><button id="transactions" href="#"><img
+                                src="images/credit_card_FILL0_wght300_GRAD0_opsz24.png">Transactions</button></div>
+                </div>
+            </div>
+            <div class="profile">
+                <img class="profilePic"
+                    src="images/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png">
+                <div class="name">
+                    <p id="user">Dr. Jose Simmons</p>
+                    <p>General Practitioner</p>
+                </div>
+                <div class="profileBtns">
+                    <button><img src="images/settings_FILL0_wght300_GRAD0_opsz24.png"></button>
+                    <button><img src="images/more_vert_FILL0_wght300_GRAD0_opsz24.png"></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Patients</h3>
+            <ul class="patient-list">
+                <li><img src="images/Layer 8.png" alt="">Emily Williams<p>Female, 18</p>
+                </li>
+                <li><img src="images/Layer 8.png" alt="">Ryan Johnson <p>Male, 45</p>
+                </li>
+                <li><img src="images/Layer 8.png" alt="">Brandon Mitchell <p>Male, 36</p>
+                </li>
+                <li class="active"><img src="images/Layer 8.png">Jessica Taylor<p>Female, 28</p>
+                </li>
+                <li><img src="images/Layer 8.png" alt="">Samantha Johnson<p>Female, 56</p>
+                </li>
+                <li><img src="images/Layer 8.png" alt="">Ashley Martinez<p>Female, 54</p>
+                </li>
+                <li><img src="images/Layer 8.png" alt="">Olivia Brown<p>Female, 32</p>
+                </li>
+                <li><img src="images/Layer 8.png" alt="">Tyler Davis<p>Male, 19</p>
+                </li>
+                <li><img src="images/Layer 8.png" alt="">Kevin Anderson<p>Male, 30</p>
+                </li>
+                <li><img src="images/Layer 8.png" alt="">Dylan Thompson<p>Male, 36</p>
+                </li>
+                <li><img src="images/Layer 8.png" alt="">Nathan Evans<p>Male, 58</p>
+                </li>
+                <li><img src="images/Layer 8.png" alt="">Mike Nolan<p>Male, 31</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Diagnosis History -->
+            <div class="diagnosis-history">
+                <h3>Diagnosis History</h3>
+                <div class="card">
+                    <!-- Placeholder for Chart -->
+                    <h4>Blood Pressure Chart</h4>
+                    <div class="chart">
+                        <div class="chart-placeholder">Chart goes here</div>
+                    </div>
+                </div>
+
+                <!-- Vitals -->
+                <div class="vitals-grid">
+                    <div class="card, respiratory">
+                        <img src="images/respiratory rate.png">
+                        <h3>Respiratory Rate</h3>
+                        <p>20 bpm</p>
+                    </div>
+                    <div class="card, temperature">
+                        <img src="images/temperature.png">
+                        <h3>Temperature</h3>
+                        <p>98.6°F</p>
+                    </div>
+                    <div class="card, heart">
+                        <img src="images/HeartBPM.png">
+                        <h3>Pulse Rate</h3>
+                        <p>70 bpm</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <!-- Diagnostic List -->
+            <div class="diagnostic-list">
+                <h3>Diagnostic List</h3>
+                <div class="table">
+                    <table>
+                        <tr class="table-header">
+                            <th>Problem/Diagnosis</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>Hypertension</td>
+                            <td>Chronic high blood pressure</td>
+                            <td>Under Observation</td>
+                        </tr>
+                        <tr>
+                            <td>Type 2 Diabetes</td>
+                            <td>Insulin resistance and elevated blood sugar</td>
+                            <td>Cured</td>
+                        </tr>
+                        <tr>
+                            <td>Asthma</td>
+                            <td>Recurrent episodes of bronchial constriction</td>
+                            <td>Inactive</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="right">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <h3>Jessica Taylor</h3>
+                <div class="image-container">
+                    <img class="image-placeholder" src="images/Layer 2.png">
+                </div>
+                <p><img src="images/calendar_today_FILL0_wght300_GRAD0_opsz24.png" style="width: 5%;">Date of Birth: August 23, 1996</p>
+                <p><img src="images/FemaleIcon.png">Gender: Female</p>
+                <p><img src="images/PhoneIcon.png">Contact Info: (415) 555-1234</p>
+                <p><img src="images/PhoneIcon.png">Emergency Contacts: (415) 555-5678</p>
+                <p><img src="images/InsuranceIcon.png">Insurance Provider: Sunshine Health Assurance</p>
+                <button>Show All Information</button>
+            </div>
+            <br>
+            <!-- Lab Results -->
+            <div class="lab-results">
+                <h3>Lab Results</h3>
+                <div class="card">
+                    <ul>
+                        <li>Blood Tests</li>
+                        <li>CT Scans</li>
+                        <li>Radiology Reports</li>
+                        <li>X-Rays</li>
+                        <li>Urine Test</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
