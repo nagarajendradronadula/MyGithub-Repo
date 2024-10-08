@@ -1,5 +1,4 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const axios = require('axios');
 const dotenv = require('dotenv');
 const Search = require('./models/search');
@@ -10,10 +9,6 @@ dotenv.config();
 const app = express();
 const PORT = 3000;
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('MongoDB connected'))
-    .catch(err => console.error('MongoDB connection error:', err));
 
 // Set EJS as the templating engine
 app.set('view engine', 'ejs');
@@ -21,10 +16,6 @@ app.set('view engine', 'ejs');
 // Serve static files from public folder
 app.set("views", path.join(__dirname, "/views"));
 app.use(express.static(path.join(__dirname, "public")));
-
-// app.get('/test', (req, res) => {
-//     res.sendFile(path.join(__dirname, "public/css/style.css"));
-// });
 
 // Homepage route
 app.get("/", (req, res) => {
@@ -37,7 +28,6 @@ app.get('/search', async (req, res) => {
 
     // Save the search query in MongoDB
     const newSearch = new Search({ query });
-    await newSearch.save();
 
     try {
         // Fetch from YouTube API
@@ -48,7 +38,7 @@ app.get('/search', async (req, res) => {
                 key: process.env.YOUTUBE_API_KEY
             }
         });
-
+        
         // Fetch from News API
         const newsResponse = await axios.get(`https://newsapi.org/v2/everything`, {
             params: {
@@ -65,6 +55,9 @@ app.get('/search', async (req, res) => {
                 api_key: process.env.SERPAPI_KEY
             }
         });
+        console.log(youtubeResponse);
+        // console.log(newsResponse);
+        // console.log(scholarResponse);
 
         // Send the results to the frontend
         res.json({
