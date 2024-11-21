@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 1</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #4caf50;
+      color: #fff;
+    }
+
+    .logo {
+      width: 80px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .banner {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 1em;
+      margin: 5px 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .introduction {
+      background: #fff;
+      padding: 15px;
+      margin: 10px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .section {
+      background: #e3f2fd;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 4px solid #2196f3;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      overflow-x: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    code {
+      font-family: monospace;
+      color: #d63384;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+  <body>
+    <header>
+      <!-- insert banner image and logo as seen in the sample website, the links for the images are provided in the question -->
+      <img src="G:\MyGithub-Repo\Miscellaneous\logo.jpg" alt="Logo" class="logo" />
+      <img src="G:\MyGithub-Repo\Miscellaneous\responsive-layout.png" alt="Banner Image" class="banner" />
+      <h1>Understanding the Fundamentals of State in JavaScript</h1>
+      <p>Designed by Your Name</p>
+    </header>
+
+    <main>
+      <section class="introduction">
+        <p>
+          Chapter 3 from the book: Vumbula React - Co-authored by John Kagga
+        </p>
+        <p>
+          In earlier chapters, we’ve dealt mostly with functional React
+          components that do not require state management. This chapter focuses
+          on state, its management, and components that utilize it in React.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>What is State?</h2>
+        <p>
+          State is a JavaScript object that stores a component’s dynamic data
+          and determines its behavior. Because state is dynamic, it enables a
+          component to track changing information between renders, making it
+          interactive.
+        </p>
+        <p>
+          State is similar to props but is private to a component and solely
+          controlled by it. Props are read-only, whereas state is mutable within
+          the component.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Adding State to a Class Component</h2>
+        <pre>
+          <code>
+            class Greeting extends React.Component {
+              render() {
+                return &lt;h1&gt;I’m a component in need of some state! &lt;/h1&gt;;
+              }
+            }
+          </code>
+        </pre>
+        <p>
+          Adding state to the Greeting component involves defining a constructor
+          function and assigning initial state using this.state.
+        </p>
+        <pre>
+          <code>
+            class Greeting extends React.Component {
+              constructor(props) {
+                super(props);
+                this.state = { name: 'Jane Doe' };
+              }
+              render() {
+                return &lt;h1&gt;Hello { this.state.name }&lt;/h1&gt;;
+              }
+            }
+          </code>
+        </pre>
+      </section>
+    </main>
+  </body>
+</html>
