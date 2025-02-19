@@ -1,0 +1,182 @@
+[
+    {
+      "question": "What is the capital of Australia?",
+      "answerOptions": [
+        { "option": "Canberra", "isCorrect": true },
+        { "option": "Sydney", "isCorrect": false },
+        { "option": "Melbourne", "isCorrect": false },
+        { "option": "Brisbane", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Which is the smallest planet in our solar system?",
+      "answerOptions": [
+        { "option": "Mercury", "isCorrect": true },
+        { "option": "Mars", "isCorrect": false },
+        { "option": "Venus", "isCorrect": false },
+        { "option": "Earth", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answerOptions": [
+        { "option": "Leonardo da Vinci", "isCorrect": true },
+        { "option": "Vincent van Gogh", "isCorrect": false },
+        { "option": "Pablo Picasso", "isCorrect": false },
+        { "option": "Claude Monet", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "answerOptions": [
+        { "option": "Amazon River", "isCorrect": false },
+        { "option": "Nile River", "isCorrect": true },
+        { "option": "Yangtze River", "isCorrect": false },
+        { "option": "Mississippi River", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "What is the hardest natural substance on Earth?",
+      "answerOptions": [
+        { "option": "Gold", "isCorrect": false },
+        { "option": "Iron", "isCorrect": false },
+        { "option": "Diamond", "isCorrect": true },
+        { "option": "Platinum", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "answerOptions": [
+        { "option": "China", "isCorrect": false },
+        { "option": "Japan", "isCorrect": true },
+        { "option": "South Korea", "isCorrect": false },
+        { "option": "Thailand", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Who discovered penicillin?",
+      "answerOptions": [
+        { "option": "Alexander Fleming", "isCorrect": true },
+        { "option": "Marie Curie", "isCorrect": false },
+        { "option": "Louis Pasteur", "isCorrect": false },
+        { "option": "Isaac Newton", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "What is the boiling point of water in Celsius?",
+      "answerOptions": [
+        { "option": "50°C", "isCorrect": false },
+        { "option": "100°C", "isCorrect": true },
+        { "option": "150°C", "isCorrect": false },
+        { "option": "200°C", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "What is the largest desert in the world?",
+      "answerOptions": [
+        { "option": "Sahara Desert", "isCorrect": true },
+        { "option": "Arabian Desert", "isCorrect": false },
+        { "option": "Gobi Desert", "isCorrect": false },
+        { "option": "Kalahari Desert", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Which organ in the human body is responsible for pumping blood?",
+      "answerOptions": [
+        { "option": "Brain", "isCorrect": false },
+        { "option": "Heart", "isCorrect": true },
+        { "option": "Liver", "isCorrect": false },
+        { "option": "Lungs", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Who invented the light bulb?",
+      "answerOptions": [
+        { "option": "Thomas Edison", "isCorrect": true },
+        { "option": "Nikola Tesla", "isCorrect": false },
+        { "option": "Alexander Graham Bell", "isCorrect": false },
+        { "option": "Galileo Galilei", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "What is the largest ocean on Earth?",
+      "answerOptions": [
+        { "option": "Atlantic Ocean", "isCorrect": false },
+        { "option": "Indian Ocean", "isCorrect": false },
+        { "option": "Pacific Ocean", "isCorrect": true },
+        { "option": "Arctic Ocean", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "How many bones are in the human body?",
+      "answerOptions": [
+        { "option": "200", "isCorrect": false },
+        { "option": "206", "isCorrect": true },
+        { "option": "210", "isCorrect": false },
+        { "option": "216", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "What is the main ingredient in guacamole?",
+      "answerOptions": [
+        { "option": "Tomato", "isCorrect": false },
+        { "option": "Avocado", "isCorrect": true },
+        { "option": "Onion", "isCorrect": false },
+        { "option": "Lettuce", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "What is the chemical symbol for water?",
+      "answerOptions": [
+        { "option": "O2", "isCorrect": false },
+        { "option": "H2O", "isCorrect": true },
+        { "option": "CO2", "isCorrect": false },
+        { "option": "NaCl", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Which continent is known as the birthplace of civilization?",
+      "answerOptions": [
+        { "option": "Europe", "isCorrect": false },
+        { "option": "Africa", "isCorrect": true },
+        { "option": "Asia", "isCorrect": false },
+        { "option": "South America", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "What is the largest organ in the human body?",
+      "answerOptions": [
+        { "option": "Liver", "isCorrect": false },
+        { "option": "Skin", "isCorrect": true },
+        { "option": "Brain", "isCorrect": false },
+        { "option": "Heart", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Which country hosted the 2016 Summer Olympics?",
+      "answerOptions": [
+        { "option": "China", "isCorrect": false },
+        { "option": "Brazil", "isCorrect": true },
+        { "option": "United States", "isCorrect": false },
+        { "option": "Japan", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Which gas is most abundant in Earth's atmosphere?",
+      "answerOptions": [
+        { "option": "Oxygen", "isCorrect": false },
+        { "option": "Nitrogen", "isCorrect": true },
+        { "option": "Carbon Dioxide", "isCorrect": false },
+        { "option": "Hydrogen", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "What is the capital of Italy?",
+      "answerOptions": [
+        { "option": "Venice", "isCorrect": false },
+        { "option": "Rome", "isCorrect": true },
+        { "option": "Florence", "isCorrect": false },
+        { "option": "Naples", "isCorrect": false }
+      ]
+    }
+  ]

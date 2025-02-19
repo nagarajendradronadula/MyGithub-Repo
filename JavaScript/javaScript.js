@@ -1,4 +1,19 @@
-/* ****************************  chp - 1 var, let, const  ***************************** */
+/*
+
+Refernces: 
+-> https://developer.mozilla.org/en-US/docs/Web/JavaScript/
+-> https://262.ecma-international.org/ (ECMA Script)
+->
+
+Video Reference:
+-> https://youtu.be/sscX432bMZo?si=w3XdyVtklIUvvodo (Chai aur Code - Javascript in 1 Shot in Hindi | Part 1 )
+-> https://youtu.be/_TjtAyMkiTI?si=y8KrpH9GQr9emg2Z (Chai aur Code - Javascript in 1 Shot in Hindi | Part 2 )
+
+*/
+
+
+
+/* ****************************  chp - 1 Var, Let, Const  ***************************** */
 
 // console.log("DNR");
 
@@ -23,7 +38,7 @@ because of issue in block scope and functional scope
 // console.table([accountId, accountEmail, password, accountCity]);
 
 
-/* *******************************  chp - 2 data types and ECMA standards  ********************************** */
+/* *******************************  chp - 2 Data Types and ECMA Standards  ********************************** */
 
 // "use strict"; //treat all js code as newer version
 
@@ -50,7 +65,7 @@ NaN => not a number
 // console.log(typeof null);
 
 
-/* ********************************  chp - 3 (Part - 1)datatype conversion  ***************************** */
+/* ********************************  chp - 3 (Part - 1) Datatype Conversion  ***************************** */
 
 // let score = "33abc";
 
@@ -74,7 +89,7 @@ NaN => not a number
 // "dnr" => true
 
 
-/* ********************************  chp - 3 (Part - 2) operators  ***************************** */
+/* ********************************  chp - 3 (Part - 2) Operators  ***************************** */
 
 // let value = 3;
 // let negVal = -value;
@@ -111,7 +126,7 @@ NaN => not a number
 // console.log(gameCounter);
 
 
-/* ********************************  chp - 4 comparison of datatypes  ***************************** */
+/* ********************************  chp - 4 Comparison of Datatypes  ***************************** */
 
 // console.log(2 > 1);
 // console.log(2 >= 1);
@@ -142,7 +157,7 @@ That's why null >= 0 is true and null > 0 (or) null == 0 is false.
 
 // console.log("2" === 2);
 
-/* ********************************  datatypes summary  ***************************** */
+/* ********************************  Datatypes Summary  ***************************** */
 
 // Primitive data types (call by value or pass by value) => here execution is done on the copy of the value
 // there are 7 types => number, string, boolean, null, undefined, symbol, bigint
@@ -175,7 +190,7 @@ That's why null >= 0 is true and null > 0 (or) null == 0 is false.
 // primitive data types are stored in stack method in memory and any change done would not change the actual value or initialised value.
 // and reference or non-primitive data types are stored in heap method in memory.
 
-/* ********************************  chp - 5 strings ***************************** */
+/* ********************************  chp - 5 Strings ***************************** */
 
 // const name = "rajendra";
 // const repoCount = 5;
@@ -207,7 +222,7 @@ That's why null >= 0 is true and null > 0 (or) null == 0 is false.
 // const random1 = "the-dog-is-barking";
 // console.log(random1.split("-"));
 
-/* ********************************  chp - 6 numbers & maths ***************************** */
+/* ********************************  chp - 6 Numbers & Maths ***************************** */
 
 /* ++++++++++++++++++++++++++++  Number  ++++++++++++++++++++++++++++++ */
 
@@ -248,7 +263,94 @@ That's why null >= 0 is true and null > 0 (or) null == 0 is false.
 // console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 
 
-/* ********************************  chp - 7 dates ***************************** */
+/* ********************************  chp - 7 Dates ***************************** */
 
-let myDate = new Date();
-console.log(myDate);
+// let myDate = new Date();
+// console.log(myDate.toString());
+// console.log(myDate.toISOString());
+// console.log(myDate.toDateString());
+// console.log(myDate.toLocaleDateString());
+// console.log(myDate.toLocaleString());
+// console.log(typeof myDate);
+
+// let createdDate = new Date(2024, 0, 2);
+// let createdDate = new Date(2024, 0, 2, 5, 30, 34);
+// let createdDate = new Date("2024-01-02");
+// let createdDate = new Date("12-01-2024");
+// console.log(createdDate.toLocaleString());
+
+// let myTimeStamp = Date.now();
+// console.log(myTimeStamp);
+// console.log(createdDate.getTime());
+
+// console.log(Math.floor(Date.now() / 1000));
+
+// let newDate = new Date();
+// console.log(newDate);
+// console.log(newDate.getMonth() + 1);
+// console.log(newDate.getDay());
+// console.log(newDate.getFullYear());
+
+// console.log(`it is ${newDate.getDate()} / ${newDate.getMonth() + 1} / ${newDate.getFullYear()}, ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`);
+
+// newDate = newDate.toLocaleString('en-IN', {
+//     weekday: "long",
+//     day: "numeric",
+//     month: "long",
+//     year: "numeric",
+//     hour: "numeric",
+//     minute: "numeric",
+//     second: "numeric"
+// })
+
+// console.log(newDate);
+
+
+/* ********************************  chp - 8 (Part - 1) Arrays ***************************** */
+
+// const myArr = [0, 1, 2, 3, 4];
+// const heroes = ["thor", "spiderman", "ironman"];
+// const myArr2 = new Array(1,2,3,4,5);
+
+// console.log(myArr[0]);
+
+// myArr.push(6);
+// myArr.push(7);
+// myArr.pop();
+
+// myArr.unshift(9);
+// myArr.shift();
+
+// console.log(myArr.includes(9));
+// console.log(myArr.indexOf(3));
+
+// const newArr = myArr.join();
+
+// console.log(myArr);
+// console.log(typeof myArr);
+// console.log(newArr);
+// console.log(typeof newArr);
+
+//slice and splice
+
+// console.log("A", myArr);
+// const myArr3 = myArr.slice(1,3);
+// console.log("B", myArr);
+// console.log("Slice: ", myArr3);
+// const myn2 = myArr.splice(1,3);
+// console.log("C", myArr);
+// console.log("Splice: ", myn2);
+
+/* ********************************  chp - 8 (Part - 2) Arrays ***************************** */
+
+const marvelHeroes = ["thor", "ironman", "spiderman"];
+const dcHeroes = ["superman", "flash", "batman"];
+
+// marvelHeroes.push(dcHeroes);
+// console.log(marvelHeroes);
+
+let heroes = marvelHeroes.concat(dcHeroes);
+
+console.log(heroes);
+// console.log(marvelHeroes);
+// console.log(dcHeroes);
