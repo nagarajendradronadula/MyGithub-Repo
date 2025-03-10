@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video to Circular GIF Converter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ffmpeg.js/4.3.1/ffmpeg.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .preview-container, .output-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .circular-media {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video, img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .download-button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Convert Video to Circular GIF</h2>
+    <input type="file" id="videoInput" accept="video/*">
+    <button onclick="convertVideo()">Convert</button>
+    
+    <div class="preview-container">
+        <h3>Preview:</h3>
+        <div class="circular-media">
+            <video id="previewVideo" autoplay loop muted></video>
+        </div>
+    </div>
+    
+    <div class="output-container">
+        <h3>Output GIF:</h3>
+        <div class="circular-media">
+            <img id="outputGif" alt="Generated GIF will appear here">
+        </div>
+        <a id="downloadLink" style="display: none;" download="output.gif">
+            <button class="download-button">Download GIF</button>
+        </a>
+    </div>
+    
+    <script>
+        async function convertVideo() {
+            const fileInput = document.getElementById('videoInput');
+            if (!fileInput.files.length) {
+                alert('Please select a video file.');
+                return;
+            }
+
+            const file = fileInput.files[0];
+            const preview = document.getElementById('previewVideo');
+            preview.src = URL.createObjectURL(file);
+            preview.load();
+
+            const { createFFmpeg, fetchFile } = FFmpeg;
+            const ffmpeg = createFFmpeg({ log: true });
+            await ffmpeg.load();
+            
+            ffmpeg.FS('writeFile', 'input.mp4', await fetchFile(file));
+            
+            await ffmpeg.run(
+                '-i', 'input.mp4',
+                '-vf', 'crop=ih:ih,scale=200:200,format=rgba,geq=r(X,Y)*alpha(X,Y):g(X,Y)*alpha(X,Y):b(X,Y)*alpha(X,Y):alpha(X,Y)',
+                '-pix_fmt', 'rgba', '-r', '15', 'output.gif'
+            );
+            
+            const data = ffmpeg.FS('readFile', 'output.gif');
+            const blob = new Blob([data.buffer], { type: 'image/gif' });
+            const gifUrl = URL.createObjectURL(blob);
+            
+            document.getElementById('outputGif').src = gifUrl;
+            const downloadLink = document.getElementById('downloadLink');
+            downloadLink.href = gifUrl;
+            downloadLink.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
