@@ -25,7 +25,7 @@ export default function TodoList() {
 
   let deleteTodo = (id) => {
     // console.log(id);
-    setTodos((prevTodos) => todos.filter((prevTodos) => prevTodos.id != id));
+    setTodos((todos) => todos.filter((prevTodos) => prevTodos.id != id));
     // console.log(newTodo);
   };
 
