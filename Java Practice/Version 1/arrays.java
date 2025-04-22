@@ -1,10 +1,9 @@
-
-package java;
 import java.util.*;
+
 public class arrays {
     public static void main(String[] args) {
-                System.out.println("Enter size and followed by names");
-          Scanner sc = new Scanner(System.in);
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter size and followed by names");
       int size = sc.nextInt();
       int numbers[] = new int[size];
 
@@ -13,7 +12,6 @@ public class arrays {
       for(int i=0; i<size; i++) {
           numbers[i] = sc.nextInt();
       }
-
 
       int max = Integer.MIN_VALUE;
       int min = Integer.MAX_VALUE;
@@ -25,7 +23,9 @@ public class arrays {
            if(numbers[i] > max) {
                max = numbers[i];
            }
+        }
 
+        System.out.println("Largest number is : " + max);
+        System.out.println("Smallest number is : " + min);
     }
-}
 }
