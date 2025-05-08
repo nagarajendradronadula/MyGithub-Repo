@@ -1,5 +1,6 @@
 {
     "sqltools.connections": [],
     "java.debug.settings.onBuildFailureProceed": true,
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "postman.settings.dotenv-detection-notification-visibility": false
 }
