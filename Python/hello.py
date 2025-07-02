@@ -22,3 +22,12 @@
 
 # print(f"Hello {first}") #f string
 # print(f"Hi {last}") #f string
+
+
+print("Hello World!")
+# Sngle Line comment
+'''Multiple
+Line
+comment'''
+
+
