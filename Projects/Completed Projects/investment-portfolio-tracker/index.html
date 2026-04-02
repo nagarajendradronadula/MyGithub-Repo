@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Investment Portfolio Tracker</title>
+</head>
+<body>
+    <h1>Investment Portfolio Tracker</h1>
+
+    <!-- Form to Add a New Investment -->
+    <form id="investment-form">
+        <label for="asset-name">Asset Name</label>
+        <input type="text" id="asset-name" placeholder="Asset Name" required>
+
+        <label for="amount-invested">Amount Invested</label>
+        <input type="number" id="amount-invested" placeholder="Amount Invested" required>
+
+        <label for="current-value">Current Value</label>
+        <input type="number" id="current-value" placeholder="Current Value" required>
+
+        <button type="submit">Add Investment</button>
+    </form>
+
+    <!-- Portfolio List -->
+    <h2>Your Investments</h2>
+    <table id="portfolio-table">
+        <thead>
+            <tr>
+                <th>Asset Name</th>
+                <th>Amount Invested</th>
+                <th>Current Value</th>
+                <th>% Change</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Total Portfolio Value -->
+    <h3>Total Portfolio Value: <span id="total-value">$0.00</span></h3>
+
+    <script src="script.js"></script>
+</body>
+</html>

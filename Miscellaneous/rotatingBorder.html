@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Colorful Border</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            /* Background color set to black */
+            margin: 0;
+        }
+
+        .box {
+            position: relative;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            /* Soft white shadow for depth */
+        }
+
+        .box::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            /* Thicker border */
+            left: -100px;
+            /* Thicker border */
+            right: -100px;
+            /* Thicker border */
+            bottom: -100px;
+            /* Thicker border */
+            border-radius: 10px;
+            border: 100px solid transparent;
+            /* Thicker border */
+            background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            animation: rotate-border 10s linear infinite;
+            /* Slower rotation */
+            z-index: -1;
+            /* Send the border behind the box */
+            filter: blur(10px);
+            /* Glow effect */
+        }
+
+        @keyframes rotate-border {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>Rotating Colorful Border</h2>
+        <p>This box has a rotating colorful border effect!</p>
+    </div>
+
+    <script>
+        // Function to change the rotation speed dynamically
+        function changeRotationSpeed(speed) {
+            const beforeElement = document.querySelector('.box::before'); // Select the before pseudo-element
+            const boxElement = document.querySelector('.box'); // Select the box element
+            boxElement.style.animationDuration = speed + 's'; // Change the animation duration
+        }
+
+        // Example: Change rotation speed after 5 seconds
+        setTimeout(() => {
+            changeRotationSpeed(15); // Change speed to 15 seconds
+        }, 5000);
+
+    </script>
+</body>
+
+</html>

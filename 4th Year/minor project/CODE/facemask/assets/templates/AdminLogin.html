@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+{%block contents%}
+ <div class="col-md-7 col-lg-7">
+               <div class="text-bg">
+                  <h1>Admin Login Form</h1>
+                  
+                  <p>
+                       <form action="{%url 'AdminLoginCheck'%}" method="post" novalidate>
+                        {%csrf_token%}
+
+                        <div id="div_id_username" class="form-group"><label for="id_username" class=" requiredField">
+                            Username<span class="asteriskField">*</span> </label>
+                            <div><input type="text" name="loginid" required autofocus autocapitalize="none"
+                                        autocomplete="username" maxlength="150" class="textinput textInput form-control"
+                                        required id="id_username"></div>
+                        </div>
+                        <div id="div_id_password" class="form-group"><label for="id_password" class=" requiredField">
+                            Password<span class="asteriskField">*</span> </label>
+                            <div><input type="password" name="pswd" required autocomplete="current-password"
+                                        class="textinput textInput form-control" required id="id_password"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark mb-2">Login</button>
+
+                    </form>
+                    {% if messages %}
+                    {% for message in messages %}
+                    <font color='RED'> {{ message }}</font>
+                    {% endfor %}
+                    {% endif %}
+                  </p>
+
+               </div>
+
+     {%endblock%}

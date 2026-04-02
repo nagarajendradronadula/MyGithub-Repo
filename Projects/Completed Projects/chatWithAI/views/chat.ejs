@@ -1,0 +1,112 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat | Chatting App</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="container">
+            <div class="innerElements">
+                <h3>Chat | Hey <u><b>%= username %></b></u>!</h3>
+                <div class="messages">
+                <form action="/chat" method="POST">
+                    <input type="text" name="from" placeholder="Who are you?"><br><br> 
+                    <textarea name="msg">Write your message here!</textarea><br><br>
+                    <button>Send</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Whatsapp</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="outer">
+      <div class="container">
+        <div class="innerElements">
+          <h3>All Chats!</h3>
+          <form method="get" action="/chats/new">
+            <button>New Chat!</button>
+            <br /><br />
+          </form>
+          % for(let chat of chats){ %>
+          <div class="chat">
+            <p>
+              From: <i><b>%= chat.from %></b></i>
+            </p>
+            <div class="msg">
+              <p>%= chat.msg %></p>
+              <form method="post" action="/chats/%=chat._id %>?_method=DELETE">
+                <button>Delete</button>
+              </form>
+            </div>
+            <hr />
+            <p>%= chat.created_at.toString().split(" ")[4] %></p>
+            <p>
+              %= chat.created_at.toString().split(" ").slice(0,4).join("-") %>
+            </p>
+          </div>
+          <br />
+          <br />
+          % } %>
+          <form>
+            <textarea name="msg[msg]">Write your message here!</textarea><br /><br />
+            <button>Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat | Chatting App</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <div class="outer">
+        <div class="container">
+            <div class="innerElements">
+                <div class="header">
+                    <div><h3 style=" margin-left: 1rem;">Chat | Hey <%= client %> !</h3></div>
+                    <div><form action="/logout" method="GET">
+                            <button style="background-color:firebrick; color:white; margin-left: 17rem;">Log Out</button>
+                          </form>
+                    </div>
+                </div>
+                <div class="messages">
+                    <% for (let chat of chats) { %>
+                        <div class="message">
+                            <p><div class="request">Message:</div><div class="response"><%= chat.msg %></div></p>
+                            <% if (chat.response) { %>
+                                <p><div class="request">Gemini:</div><div class="response"><%= chat.response %></div></p>
+                            <% } %>
+                        </div>
+                    <% } %>
+                </div>
+                <form action="/chat" method="POST" class="send">
+                    <textarea name="msg" cols="45" rows="2" placeholder="Write your message here!"></textarea>
+                    <button>Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

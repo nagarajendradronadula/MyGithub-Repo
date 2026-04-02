@@ -1,0 +1,204 @@
+body {
+    background: #F6F7F8 0% 0% no-repeat padding-box;
+    opacity: 1;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    height:100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    display:flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-top: 20px;
+}
+.sidebar {
+    width: 20%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+.content {
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.patient-list {
+    list-style: none;
+    padding: 0;
+}
+.patient-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+.patient-list li.active {
+    background-color: #e6f7ff;
+    border-radius: 5px;
+}
+.header, .diagnosis-history, .vitals, .diagnostic-list, .lab-results, .profile {
+    margin-bottom: 20px;
+}
+.profile img {
+    border-radius: 50%;
+    width: 100px;
+}
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.card h2 {
+    margin: 0;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 8%;
+    border:2px solid black;
+    border-radius: 70px;
+}
+
+nav img{ 
+    margin-left: 0.5rem;
+}
+
+.innerNavElements {
+    dispLay: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 70px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 50%;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 70px;
+}
+
+.innerBtns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 70px;
+}
+
+.innerBtns button{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 70px;
+    font-weight: 600;
+}
+
+.innerBtns div img{
+    margin-right: 0.4rem;
+}
+
+.innerBtns button:active{
+    background-color: #01F0D0;
+    height: 40%;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 16rem;
+    height: 50%;
+}
+
+.name{
+    display: block;
+    width:70%;
+}
+
+.profilePic{
+    margin-right: 1rem;
+    width: 17%;
+}
+
+.name p{
+    margin: 0 rem;
+    width: 100%;
+    height: 50%;
+    font-size: smaller;
+    /* margin-left: -2rem; */
+}
+
+#user{
+    font-weight: 600;
+    font-size: medium;
+    margin-top: 0.5rem;
+}
+
+.profileBtns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    height: 50%;
+    border-radius: 70px;
+    /* margin-left: -10rem; */
+}
+
+.profileBtns button{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 70px;
+    font-weight: 600;
+    height: 70%;
+    width: 30%;
+}

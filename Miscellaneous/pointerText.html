@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Tooltip</title>
+    <Style>
+        .hover-item {
+            padding: 10px;
+            margin: 20px;
+            background-color: lightblue;
+            border-radius: 5px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        #tooltip {
+            position: absolute;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            display: none;
+            /* Initially hidden */
+            font-size: 14px;
+            pointer-events: none;
+            /* Ensures the tooltip doesn’t interfere with mouse events */
+        }
+    </Style>
+</head>
+
+<body>
+
+    <div class="hover-item" data-text="This is text for item 1">Hover over me - Item 1</div>
+    <div class="hover-item" data-text="This is text for item 2">Hover over me - Item 2</div>
+    <div class="hover-item" data-text="This is text for item 3">Hover over me - Item 3</div>
+
+    <div id="tooltip"></div>
+
+    <script>
+        const tooltip = document.getElementById('tooltip');
+
+        document.querySelectorAll('.hover-item').forEach(item => {
+            item.addEventListener('mousemove', (e) => {
+                const text = item.getAttribute('data-text');
+                tooltip.style.display = 'block';
+                tooltip.style.left = e.pageX + 10 + 'px'; // Position tooltip 10px away from cursor
+                tooltip.style.top = e.pageY + 10 + 'px';
+                tooltip.textContent = text;
+            });
+
+            item.addEventListener('mouseleave', () => {
+                tooltip.style.display = 'none'; // Hide tooltip when not hovering
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

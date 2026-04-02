@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container h2{
+    text-align: center;
+}
+
+input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#deposit {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+#withdraw {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+#balance-container {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+}

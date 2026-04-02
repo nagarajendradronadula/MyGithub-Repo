@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Chatting App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="outer">
+      <div class="container">
+        <div class="innerElements">
+          <form action="/login" method="POST">
+            <h2>Login</h2>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" />
+            <br /><br />
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+            <br /><br />
+            <button type="submit" class="btnLogin">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+         window.onload = function() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('error')) {
+          const error = params.get('error');
+          if (error === 'wrongpassword') {
+            alert("Wrong Password! Try Again");
+          } else if (error === 'nouser') {
+            alert("No User Found! Try Registering Yourself");
+          }
+        }
+
+        const usernameField = document.getElementById('username');
+        if (params.has('username')) {
+          usernameField.value = params.get('username');
+        }
+      }
+    </script>
+  </body>
+</html>

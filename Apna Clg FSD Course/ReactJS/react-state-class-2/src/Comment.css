@@ -1,0 +1,10 @@
+.comment{
+    border: 3px solid brown;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color:antiquewhite;
+    color: black;
+    font-weight: 540;
+    text-align: center;
+    margin: 1rem;
+}

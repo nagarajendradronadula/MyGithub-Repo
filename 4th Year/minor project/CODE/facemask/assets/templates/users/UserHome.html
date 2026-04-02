@@ -1,0 +1,27 @@
+{% extends 'users/userbase.html' %}
+{% block title %}{% endblock %}
+{% block admin_home %}active{% endblock %}
+
+{% block content %}
+    <style>
+
+        .jumbotron {
+            margin-top: 20%;
+            height: 450px;
+            background:brown;
+        }
+    </style>
+    <center>
+        <section id="main" class="align-items-center">
+            <div class="jumbotron bx-fade-up">
+
+                <div class="col-md-12">
+                    <h1>Live Stream Done</h1>
+
+                </div>
+            </div>
+             <span>Live again <a href="{%url 'detect/' %}">Click</a> </span>
+        </section>
+    </center>
+
+{% endblock %}

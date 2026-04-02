@@ -1,0 +1,44 @@
+
+
+{% extends 'users/userbase.html'%}
+{%block contents%}
+
+<style>
+
+  .jumbotron {
+      margin-top: 20%;
+      height: 450px;
+      background: #31e481;
+  }
+</style>
+<center>
+  <section id="main" class="align-items-center">
+      <div class="jumbotron">
+
+          <div class="col-md-12">
+                <h2 align="center">Upload a pic</h2>
+      <form action="{%url 'upload_image' %}" method="post" enctype="multipart/form-data">
+                                              {%csrf_token%}
+                                           <div class="form-group">
+                                                  <input type="file" id="contact_subject" name="file" class="form-control" placeholder="Select an Image"  required/>
+                                           </div>
+                                            <div class="form-group">
+                                                <button type="submit" id="contact_subject" name="Submit" class="btn-get-started scrollto" >Submit</button>
+                                              </div>
+
+
+                                          </form>
+      </p>
+<!--<a href="#about" class="btn-get-started scrollto">Get Started</a>-->
+      <pre>
+
+
+          <img src="{{path}}" width="450" height="380">
+      </pre>
+          </div>
+
+      </div>
+  </section>
+</center>
+
+{%endblock%}
